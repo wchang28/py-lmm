@@ -40,8 +40,7 @@ class Cap(InterestRateProduct):
             payoff[payoff < 0] = 0.0 # Maximum with 0
 
             # Compute expectation under numeraire measure
-            caplet_price = np.mean(D*payoff/(1 if i==num_rates-1 else P),
-            dtype=np.float64)
+            caplet_price = np.mean(D*payoff/(1 if i==num_rates-1 else P), dtype=np.float64)
 
             caplet_prices.append(caplet_price)
 
